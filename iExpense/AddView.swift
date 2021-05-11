@@ -39,15 +39,17 @@ struct AddView: View {
                     self.expenses.items.append(item)
                 } else {
                     showingAlert = true
+                    print("Alert has been set to TRUE")
                 }
 
                 self.presentationMode.wrappedValue.dismiss()
             })
             .alert(isPresented: $showingAlert, content: {
-                Alert(title: Text("Invalid amount"), message: Text("You have entered something that is not an integer."), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Invalid amount"), message: Text("You have entered something that is not an integer."), dismissButton: .default(Text("OK")) {
+                    print("Alert has been set to FALSE")
+                })
             })
         }
-        
     }
 }
 

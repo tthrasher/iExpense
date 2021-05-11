@@ -4,6 +4,9 @@
 //
 //  Created by Terry Thrasher on 2021-05-04.
 //
+//  BUGS:
+//      1. The first time our non-integer alert is shown, it dismisses itself immediately.
+//      2. If the non-integer alert is shown, touching the Save button will save the result but not dismiss the AddView.
 
 import SwiftUI
 
